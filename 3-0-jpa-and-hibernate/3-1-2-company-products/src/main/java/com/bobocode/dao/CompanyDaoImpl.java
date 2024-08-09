@@ -3,6 +3,7 @@ package com.bobocode.dao;
 import com.bobocode.model.Company;
 import com.bobocode.util.ExerciseNotCompletedException;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
 public class CompanyDaoImpl implements CompanyDao {
@@ -14,6 +15,7 @@ public class CompanyDaoImpl implements CompanyDao {
 
     @Override
     public Company findByIdFetchProducts(Long id) {
-        throw new ExerciseNotCompletedException(); // todo
+        EntityManager manager = entityManagerFactory.createEntityManager();
+        return manager.find(Company.class,id);
     }
 }

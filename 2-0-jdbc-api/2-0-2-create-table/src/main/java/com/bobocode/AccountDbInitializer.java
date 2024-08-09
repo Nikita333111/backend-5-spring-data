@@ -3,6 +3,7 @@ package com.bobocode;
 import com.bobocode.util.ExerciseNotCompletedException;
 
 import javax.sql.DataSource;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
@@ -30,6 +31,9 @@ public class AccountDbInitializer {
      * @throws SQLException
      */
     public void init() throws SQLException {
+        try(Connection connection = dataSource.getConnection()){
+
+        }
         throw new ExerciseNotCompletedException(); // todo
     }
 }
