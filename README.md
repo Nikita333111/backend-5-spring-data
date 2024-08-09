@@ -1,3 +1,14 @@
+## To test this task clone the repository
+```bash
+   git clone repositoryUrl
+```
+## run maven command
+```bash
+mvn test -Dmaven.test.failure.ignore=true 
+```
+because updated bobocode repository has new task that are not included
+in stepik program (2-0-jdbc-api not implemented)
+
 # <img src="https://raw.githubusercontent.com/bobocode-projects/resources/master/image/logo_transparent_background.png" height=50/>Welcome to the Java Persistence exercises
 Build strong skills that you will need for creating persistence layer in a real-world Enterprise Java development 💪
 
